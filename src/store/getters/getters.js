@@ -4,3 +4,9 @@ export const filters = (state) => {
 export const selectedFilters = (state) => {
     return state.selectedFilters;
 }
+export const characters = (state) => {
+  return state.characters;
+}
+export const filteredCharacters = (state) => {
+  return state.filteredCharacters;
+}

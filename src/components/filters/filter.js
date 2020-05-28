@@ -6,7 +6,7 @@ export default {
     },
     methods: {
         updateSelectedFilter() {
-
+          this.$store.dispatch("updateCheckedFilters");
         }
     }
 };
