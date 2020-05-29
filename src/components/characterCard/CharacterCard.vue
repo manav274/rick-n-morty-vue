@@ -54,10 +54,10 @@
 			</ul>
 		</section>
 		<section class="d-flex col-sm-12 justify-content-center">
-			<button class="btn btn-outline-primary mr-3" @click="prevPage" :class="{disabled:!checkPrev}">
+			<button class="btn btn-outline-primary mr-3" @click="previousPage" :class="{disabled:!ifPrev}">
 				<i class="fa fa-arrow-left" aria-hidden="true"></i> Prev
 			</button>
-			<button class="btn btn-outline-primary ml-3" @click="nextPage" :class="{disabled:!checkNext}">
+			<button class="btn btn-outline-primary ml-3" @click="nextPage" :class="{disabled:!ifNext}">
 				Next
 				<i class="fa fa-arrow-right" aria-hidden="true"></i>
 			</button>

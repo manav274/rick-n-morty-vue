@@ -10,11 +10,11 @@ export const filteredCharacters = (state, filteredCharacters) => {
   state.filteredCharacters = filteredCharacters;
 }
 
-export const prevPage = (state, prev) => {
-  state.prev = prev;
+export const prevPage = (state, url) => {
+  state.prevPage = url;
 }
-export const nextPage = (state, next) => {
-  state.next = next;
+export const nextPage = (state, url) => {
+  state.nextPage = url;
 }
 export const characterSearch = (state, name) => {
   state.searchName = name;

@@ -20,7 +20,7 @@ export const updateCheckedFilters = ({ dispatch, commit, state }) => {
 export const getCharacters = ({ dispatch, commit, state }, args) => {
   let url = state.url;
   if (args && args.url ) {
-    url = params.url.concat("&");
+    url = args.url.concat("&");
   }
   console.log('url for axios is', url);
   axios.get(url)

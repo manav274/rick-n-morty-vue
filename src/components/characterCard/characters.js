@@ -7,13 +7,13 @@ export default {
                 ? false
                 : this.$store.getters.filteredCharacters;
         },
-        checkPrev() {
-            let prev = this.$store.getters.prev;
-            return prev != null ? true : false;
+        ifPrev() {
+            let prevPage = this.$store.getters.previousPage;
+            return prevPage != null ? true : false;
         },
-        checkNext() {
-            let next = this.$store.getters.next;
-            return next != null ? true : false;
+        ifNext() {
+            let nextPage = this.$store.getters.nextPage;
+            return nextPage != null ? true : false;
         }
     },
     created() {
@@ -21,16 +21,16 @@ export default {
         this.$store.dispatch("getCharacters");
     },
     methods: {
-        prevPage() {
-            const prev = this.$store.getters.prev;
-            if (prev != null) {
-                this.$store.dispatch("fetchCharacters", { url: prev });
+        previousPage() {
+            const prevPage = this.$store.getters.previousPage;
+            if (prevPage != null) {
+                this.$store.dispatch("getCharacters", { url: prevPage });
             }
         },
         nextPage() {
-            const next = this.$store.getters.next;
-            if (next != null) {
-                this.$store.dispatch("fetchCharacters", { url: next });
+            const nextPage = this.$store.getters.nextPage;
+            if (nextPage != null) {
+                this.$store.dispatch("getCharacters", { url: nextPage });
             }
         }
     }

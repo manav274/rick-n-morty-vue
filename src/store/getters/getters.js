@@ -10,3 +10,9 @@ export const characters = (state) => {
 export const filteredCharacters = (state) => {
     return state.filteredCharacters;
 }
+export const previousPage = (state) => {
+  return state.prevPage;
+}
+export const nextPage = (state) => {
+  return state.nextPage;
+}
