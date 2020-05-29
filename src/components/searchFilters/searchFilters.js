@@ -15,8 +15,14 @@ export default {
                 sortBy: this.sortBy,
                 orderBy: this.orderBy
             });
-        }
+        },
+        selectedFilterClick(value, name, index) {
+          this.$store.dispatch("deleteFilter", { value, name });
+      }
     },
     computed: {
+       selectedFilters() {
+            return this.$store.getters.selectedFilters;
+        }
     }
 };

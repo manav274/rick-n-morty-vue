@@ -88,6 +88,17 @@ export const applyFilters = ({ commit, state }) => {
   commit('filteredCharacters', filteredCharactersList);
 }
 
+export const deleteFilter = ({ dispatch, commit, state }, filter) => {
+  let filters = state.filters;
+  filters[filter.name].forEach(item => {
+      if (item.value == filter.value) {
+          item.selected = false;
+      }
+  })
+  commit("filters", filters);
+  dispatch('updateCheckedFilters');
+}
+
 export const searchByName = ({ dispatch, commit, state }, charName) => {
   commit("characterSearch", charName);
   dispatch("applyFilters");

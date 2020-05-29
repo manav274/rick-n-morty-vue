@@ -10,6 +10,10 @@ export const filteredCharacters = (state, filteredCharacters) => {
   state.filteredCharacters = filteredCharacters;
 }
 
+export const filters = (state, filters) => {
+  state.filters = filters;
+}
+
 export const prevPage = (state, url) => {
   state.prevPage = url;
 }
