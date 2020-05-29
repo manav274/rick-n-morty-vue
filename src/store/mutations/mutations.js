@@ -4,9 +4,12 @@ export const selectedFilters = (state, selectedFilters) => {
 
 export const characters = (state, characters) => {
   state.characters = characters;
-  state.filteredCharacters = characters;
-  console.log (state)
 }
+
+export const filteredCharacters = (state, filteredCharacters) => {
+  state.filteredCharacters = filteredCharacters;
+}
+
 export const prevPage = (state, prev) => {
   state.prev = prev;
 }

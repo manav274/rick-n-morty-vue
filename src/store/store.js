@@ -12,7 +12,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         filters: filterOptions,
-        selectedFilters: [],
+        selectedFilters: {},
         url: "https://rickandmortyapi.com/api/character/?",
         characters: [],
         filteredCharacters: []

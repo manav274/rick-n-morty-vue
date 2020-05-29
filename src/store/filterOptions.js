@@ -26,9 +26,27 @@ const filterOptions = {
             selected: false
         },
         {
-            value: 'unknown',
+            value: 'Unknown',
             selected: false
         }
+    ],
+    origin:[
+      {
+        value:'Unknown',
+            selected: false
+      },
+      {
+        value:'Post-Apocalyptic Earth',
+            selected: false
+      },
+      {
+        value:'NuptiaFilter',
+            selected: false
+      },
+      {
+        value:'OtherOriginFilter',
+            selected: false
+      }
     ]
 }
 
