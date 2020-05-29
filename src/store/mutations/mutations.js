@@ -16,3 +16,6 @@ export const prevPage = (state, prev) => {
 export const nextPage = (state, next) => {
   state.next = next;
 }
+export const characterSearch = (state, name) => {
+  state.searchName = name;
+}

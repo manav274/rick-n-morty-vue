@@ -44,7 +44,7 @@ const filterOptions = {
             selected: false
       },
       {
-        value:'OtherOriginFilter',
+        value:'Other Origin',
             selected: false
       }
     ]

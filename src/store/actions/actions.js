@@ -70,7 +70,7 @@ export const applyFilters = ({ commit, state }) => {
         let tempList = filteredCharactersList.slice();
         filteredCharactersList = [];
         filter = selectedFilters.origin;
-        if (filter.includes('otherOrigin')) {
+        if (filter.includes('Other Origin')) {
             filteredCharactersList = filteredCharactersList.concat(tempList.filter(item => (item.origin.name.toLowerCase() !== 'unknown' && item.origin.name.toLowerCase() !== 'post-apocalyptic earth' && item.origin.name.toLowerCase() !== 'nuptia 4')));
         }
         filter.forEach(el => {
@@ -78,6 +78,32 @@ export const applyFilters = ({ commit, state }) => {
         });
     }
 
+    if(state.searchName !==''){
+      let tempList = filteredCharactersList.slice();
+        filteredCharactersList = [];
+        filter = state.searchName;
+        filteredCharactersList = filteredCharactersList.concat(tempList.filter(item => (item.name.toLowerCase().includes(filter.toLowerCase()))));
+    }
   console.log('filteredCharacters', filteredCharactersList);
   commit('filteredCharacters', filteredCharactersList);
+}
+
+export const searchByName = ({ dispatch, commit, state }, charName) => {
+  commit("characterSearch", charName);
+  dispatch("applyFilters");
+}
+export const sortArrangement = ({ commit, state }, sortOrder) => {
+  let characters = state.filteredCharacters;
+  if (sortOrder.orderBy === 'asc') {
+      characters.sort((a, b) => {
+          return a[sortOrder.sortBy] - b[sortOrder.sortBy];
+      })
+  }
+  if (sortOrder.orderBy === 'desc') {
+      characters.sort((a, b) => {
+          return a[sortOrder.sortBy] - b[sortOrder.sortBy];
+      })
+      characters.reverse();
+  }
+  commit("filteredCharacters", characters);
 }

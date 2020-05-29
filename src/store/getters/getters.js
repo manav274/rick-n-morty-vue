@@ -5,8 +5,8 @@ export const selectedFilters = (state) => {
     return state.selectedFilters;
 }
 export const characters = (state) => {
-  return state.characters;
+    return state.characters;
 }
 export const filteredCharacters = (state) => {
-  return state.filteredCharacters;
+    return state.filteredCharacters;
 }

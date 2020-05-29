@@ -15,7 +15,8 @@ export default new Vuex.Store({
         selectedFilters: {},
         url: "https://rickandmortyapi.com/api/character/?",
         characters: [],
-        filteredCharacters: []
+        filteredCharacters: [],
+        searchName:''
     },
     mutations,
     actions,
