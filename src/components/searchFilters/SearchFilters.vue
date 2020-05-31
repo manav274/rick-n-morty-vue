@@ -33,11 +33,10 @@
 					aria-label="Search"
 					v-model.lazy="name"
 					@keydown:enter.prevent="characterSearch"
-          @change="characterSearch"
 				/>
 				<button
 					class="btn btn-secondary my-2 my-sm-0"
-					type="button"
+					type="submit"
 					@click.prevent="characterSearch"
 				>
 					Search
